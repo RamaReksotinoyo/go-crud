@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    # Menggunakan Dockerfile yang telah dibuat sebelumnya
+    build:
+      context: .
+    # Menjalankan container pada port 1323
+    ports:
+      - "1323:1323"
+    # Menggunakan volume untuk menyimpan data orders
+    volumes:
+      - ./data:/app/data
